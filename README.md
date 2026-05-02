@@ -4,6 +4,18 @@ Simple tool to remove the Weedhack stealer malware, primarily targeting Minecraf
 
 **(note: if you are infected with malware, you should always restore from a backup or reset, other malware could have been installed while Weedhack was active, be vigilant)**
 
+## v2.0 - vibecoded update lol
+
+Now detects and removes new weedhack v4+ variants that use Ethereum RPC C2 infrastructure, greek unicode obfuscation, and in-memory payload execution. Also scans your Minecraft mod directories for infected JARs and can invalidate stolen session tokens.
+
+### What it does
+- Kills running weedhack processes (javaw.exe)
+- Scans mod folders across 11 common MC launchers for infected JARs
+- Detects new variants via constant pool analysis (greek unicode entrypoints, session token theft patterns, XOR obfuscation, ClassLoader abuse)
+- Detects old variants via filesystem indicators (SecurityUpdates folder, scheduled tasks, registry keys)
+- Optionally invalidates launcher accounts to revoke stolen session tokens
+- Removes all detected malware with user confirmation
+
 ```
 detection_rules:
   strings:
