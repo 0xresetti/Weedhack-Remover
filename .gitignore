@@ -1,0 +1,7 @@
+new-weedhack-payload/
+newalt-weedhack-payload/
+build/
+dist/
+__pycache__/
+*.spec
+.claude/
